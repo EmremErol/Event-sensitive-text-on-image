@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Event sensitive text on image</title>
+        <style>
+            #coverageArea{
+                position:relative;
+                width:542px;
+                height:415px;
+                margin:50px auto;
+                border:3px solid black;
+            }
+            #textArea{
+                position:absolute;
+                background-color: black;
+                bottom:0;
+                left:0;
+                padding:5px;
+                -moz-opacity:0.7;
+                -ms-opacity: 0.7;
+                -webkit-opacity: 0.7;
+                -o-opacity: 0.7;
+                opacity: 0.7;
+                filter:alpha(opacity=70);
+            }
+            #text{
+                color:white;
+                -moz-opacity:1;
+                -ms-opacity:1;
+                -webkit-opacity:1;
+                -o-opacity:1;
+                opacity: 1;
+                filter:alpha(opacity=100);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="coverageArea" onmouseover="goster()" onmouseout="gizle()">
+            <h2 style="text-align:center;">Kız Kulesi</h2>
+            <img src="resim.jpg" alt="Kız Kulesi" width="542px" height="348px" style=" border:none;">
+            <div id="textArea" style="display:none;"><div id="text"><strong><u>Kız Kulesi,</u></strong> İstanbul Boğazı'nın Marmara Denizi'ne yakın kısmında, Salacak açıklarında yer alan küçük adacık üzerinde inşa edilmiş yapıdır.</div></div>
+        </div>
+
+
+        <script type="text/javascript" language="javascript">
+            function goster(){
+                document.getElementById("textArea").style.display = "block";
+            }
+            function gizle(){
+                document.getElementById("textArea").style.display="none";
+            }
+        </script>
+
+
+
+
+
+    </body>
+
+</html>
